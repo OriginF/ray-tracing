@@ -42,8 +42,38 @@ inline void sample_Render(int x, int y){
     }
 }
 
-inline void sample_Tracer(int i,int j){
-
+inline void sample_Tracer(){
+    for (int y = 0; y < h; y++) {
+        fprintf(stderr, "\rHitPointPass %5.2f%%", 100.0 * y / (h - 1));
+        for (int x = 0; x < w; x++) {
+            pixel_index = x + y * w;
+            Vec3D d = cx * ((x + 0.5) / w - 0.5) + cy * (-(y + 0.5) / h + 0.5) + campos.d;
+            Trace(Ray(campos.o + d * 140, d.normalize()), 0, true, Vec3D(), Vec3D(1, 1, 1), 0);
+        }
+    }
+    build_hash_grid(w,h);
+    num_photon = samples;
+    vw = Vec3D(1,1,1);
+    #pragma omp parallel for schedule(dynamic, 1) private(r)
+    for(int i=0;i<num_photon;i++){
+        double p = 100. * (i+1)/num_photon;
+        fprintf(stderr, "\rPhotonPass %5.2f%%", p);
+        int m = 1000*i;
+        Ray r;
+        Vec3D f;
+        for(int j=0;j<1000;j++){
+            MMPRay(&r,&f,m+j);
+            Trace(r, 0 , false, f, vw, m + j);
+        }
+    }
+    CrashList *lst = hitpoints;
+    while(lst!=NULL){
+        Crash *hp = lst->id;
+        lst = lst->next;
+        int i = hp->pixel_index;
+        Vec3D ans = hp->flux * (1.0 / (M_PI * hp->r2 * num_photon * 1000.0));
+        c[i] = c[i] + ans;
+    }
 }
 
 #endif

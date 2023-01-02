@@ -39,7 +39,6 @@ void Trace(const Ray &r, int dpt, bool m, const Vec3D &fl, const Vec3D &adj, int
             // find neighboring measurement points and accumulate flux via progressive density estimation
             Vec3D hh = (x - hpbbox.min) * hash_s;
             int ix = abs(int(hh.x)), iy = abs(int(hh.y)), iz = abs(int(hh.z));
-            // printf("%d,%d,%d\n",ix,iy,iz);
             // strictly speaking, we should use #pragma omp critical here.
             // it usually works without an artifact due to the fact that photons are
             // rarely accumulated to the same measurement points at the same time (especially with QMC).
