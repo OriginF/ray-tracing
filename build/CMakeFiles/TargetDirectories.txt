@@ -1,0 +1,3 @@
+/home/fqy22/桌面/smallpt/build/CMakeFiles/pt.dir
+/home/fqy22/桌面/smallpt/build/CMakeFiles/edit_cache.dir
+/home/fqy22/桌面/smallpt/build/CMakeFiles/rebuild_cache.dir

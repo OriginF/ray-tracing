@@ -1,0 +1,16 @@
+{
+    "files.associations": {
+        "cstring": "cpp",
+        "random": "cpp",
+        "new": "cpp",
+        "fstream": "cpp",
+        "iosfwd": "cpp",
+        "initializer_list": "cpp",
+        "string_view": "cpp",
+        "utility": "cpp",
+        "cmath": "cpp",
+        "*.tcc": "cpp",
+        "istream": "cpp",
+        "vector": "cpp"
+    }
+}
