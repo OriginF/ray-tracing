@@ -30,6 +30,7 @@ void scene_reader(string filename){
     if(argd[0]=="SIMPLE")mode = SIMPLE;
     else if(argd[0]=="BRDF")mode = BRDF;
     else if(argd[0]=="MIS")mode = MIS;
+    else if(argd[0]=="PPM")mode = PPM;
     samples = atoi(argd[1].c_str());
     while(getline(file,line)){
         if(line[0]=='#')continue;

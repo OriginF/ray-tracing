@@ -237,8 +237,17 @@ CMakeFiles/pt.dir/src/main.cpp.o: /home/fqy22/桌面/smallpt/src/main.cpp \
   /home/fqy22/桌面/smallpt/include/def.hpp \
   /home/fqy22/桌面/smallpt/include/Ray.hpp \
   /home/fqy22/桌面/smallpt/include/Vec.hpp \
+  /home/fqy22/桌面/smallpt/include/Crash.hpp \
+  /home/fqy22/桌面/smallpt/include/BDBox.hpp \
+  /home/fqy22/桌面/smallpt/include/Crash.hpp \
   /home/fqy22/桌面/smallpt/include/init.hpp \
+  /home/fqy22/桌面/smallpt/include/def.hpp \
+  /home/fqy22/桌面/smallpt/include/Vec.hpp \
   /home/fqy22/桌面/smallpt/include/Ray.hpp \
+  /home/fqy22/桌面/smallpt/include/BDBox.hpp \
+  /home/fqy22/桌面/smallpt/include/MMPRay.hpp \
+  /home/fqy22/桌面/smallpt/include/Ray.hpp \
+  /home/fqy22/桌面/smallpt/include/init.hpp \
   /home/fqy22/桌面/smallpt/include/geometry/include.hpp \
   /home/fqy22/桌面/smallpt/include/geometry/BaseGeo.hpp \
   /home/fqy22/桌面/smallpt/include/Ray.hpp \
@@ -271,7 +280,8 @@ CMakeFiles/pt.dir/src/main.cpp.o: /home/fqy22/桌面/smallpt/src/main.cpp \
   /home/fqy22/桌面/smallpt/src/helpers/cosw_helper.hpp \
   /home/fqy22/桌面/smallpt/src/helpers/brdf_helper.hpp \
   /home/fqy22/桌面/smallpt/src/helpers/cosw_helper.hpp \
-  /home/fqy22/桌面/smallpt/src/helpers/ppm_helper.hpp
+  /home/fqy22/桌面/smallpt/src/helpers/ppm_helper.hpp \
+  /home/fqy22/桌面/smallpt/src/helpers/bdbox_helper.hpp
 
 
 /home/fqy22/桌面/smallpt/src/utils.hpp:
@@ -285,6 +295,8 @@ CMakeFiles/pt.dir/src/main.cpp.o: /home/fqy22/桌面/smallpt/src/main.cpp \
 /home/fqy22/桌面/smallpt/src/helpers/ppm_helper.hpp:
 
 /home/fqy22/桌面/smallpt/include/geometry/BaseGeo.hpp:
+
+/home/fqy22/桌面/smallpt/include/BDBox.hpp:
 
 /home/fqy22/桌面/smallpt/include/Ray.hpp:
 
@@ -321,6 +333,8 @@ CMakeFiles/pt.dir/src/main.cpp.o: /home/fqy22/桌面/smallpt/src/main.cpp \
 /usr/include/c++/9/bits/locale_classes.tcc:
 
 /usr/include/c++/9/bits/ios_base.h:
+
+/home/fqy22/桌面/smallpt/include/MMPRay.hpp:
 
 /usr/include/c++/9/bits/vector.tcc:
 
@@ -401,6 +415,8 @@ CMakeFiles/pt.dir/src/main.cpp.o: /home/fqy22/桌面/smallpt/src/main.cpp \
 /usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
 
 /usr/include/c++/9/initializer_list:
+
+/home/fqy22/桌面/smallpt/include/Crash.hpp:
 
 /usr/include/pthread.h:
 
@@ -543,6 +559,8 @@ CMakeFiles/pt.dir/src/main.cpp.o: /home/fqy22/桌面/smallpt/src/main.cpp \
 /usr/include/x86_64-linux-gnu/bits/fp-fast.h:
 
 /usr/include/x86_64-linux-gnu/bits/types.h:
+
+/home/fqy22/桌面/smallpt/src/helpers/bdbox_helper.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
 

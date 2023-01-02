@@ -22,20 +22,28 @@ inline void writeBMP(int w, int h, Vec3D* img, const char* filename){
     fclose(fp);
 }
 
-inline Vec3D sample_Render(int x, int y, int sx, int sy){
-    Vec3D r;
-    for (int s = 0; s<samples; s++) {
-        //get dx dy randomly -1 ~ 0
-        double r1 = 2 * erand48(xseed);
-        double r2 = 2 * erand48(xseed);
-        double dx = r1<1 ? sqrt(r1) - 1 : 1 - sqrt(2 - r1);
-        double dy = r2<1 ? sqrt(r2) - 1 : 1 - sqrt(2 - r2);
-        // subpixels sx
-        Vec3D d = cx*(((sx + .5 + dx) / 2 + x) / w - .5) +
-            cy*(((sy + .5 + dy) / 2 + y) / h - .5) + campos.d;
-        r = r + Render(Ray(campos.o + d * 140, d.normalize()), 0)*(1. / samples);
+inline void sample_Render(int x, int y){
+    for (int sy = 0, i = (h - y - 1)*w + x; sy<2; sy++){
+        for (int sx = 0; sx<2; sx++) {
+            Vec3D r;
+            for (int s = 0; s<samples; s++) {
+                //get dx dy randomly -1 ~ 0
+                double r1 = 2 * erand48(xseed);
+                double r2 = 2 * erand48(xseed);
+                double dx = r1<1 ? sqrt(r1) - 1 : 1 - sqrt(2 - r1);
+                double dy = r2<1 ? sqrt(r2) - 1 : 1 - sqrt(2 - r2);
+                // subpixels sx
+                Vec3D d = cx*(((sx + .5 + dx) / 2 + x) / w - .5) +
+                    cy*(((sy + .5 + dy) / 2 + y) / h - .5) + campos.d;
+                r = r + Render(Ray(campos.o + d * 140, d.normalize()), 0)*(1. / samples);
+            }
+            c[i] = c[i] + Vec3D(clamp(r.x), clamp(r.y), clamp(r.z))*.25;
+        }
     }
-    return r;
+}
+
+inline void sample_Tracer(int i,int j){
+
 }
 
 #endif

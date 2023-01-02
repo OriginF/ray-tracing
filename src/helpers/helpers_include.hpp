@@ -6,6 +6,6 @@
 #include "./brdf_helper.hpp"
 #include "./cosw_helper.hpp"
 #include "./ppm_helper.hpp"
-
+#include "./bdbox_helper.hpp"
 
 #endif

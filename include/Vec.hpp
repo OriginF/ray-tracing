@@ -39,8 +39,16 @@ public:
         return Vec3D(x+b.x,y+b.y,z+b.z);
     }
 
+    Vec3D operator+(double b) const{
+        return Vec3D(x+b,y+b,z+b);
+    }
+
     Vec3D operator-(const Vec3D &b) const{
         return Vec3D(x-b.x,y-b.y,z-b.z);
+    }
+
+    Vec3D operator-(double b) const{
+        return Vec3D(x-b,y-b,z-b);
     }
 
     Vec3D operator-() const{

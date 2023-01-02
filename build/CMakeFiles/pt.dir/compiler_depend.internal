@@ -238,8 +238,17 @@ CMakeFiles/pt.dir/src/main.cpp.o
  /home/fqy22/桌面/smallpt/include/def.hpp
  /home/fqy22/桌面/smallpt/include/Ray.hpp
  /home/fqy22/桌面/smallpt/include/Vec.hpp
+ /home/fqy22/桌面/smallpt/include/Crash.hpp
+ /home/fqy22/桌面/smallpt/include/BDBox.hpp
+ /home/fqy22/桌面/smallpt/include/Crash.hpp
  /home/fqy22/桌面/smallpt/include/init.hpp
+ /home/fqy22/桌面/smallpt/include/def.hpp
+ /home/fqy22/桌面/smallpt/include/Vec.hpp
  /home/fqy22/桌面/smallpt/include/Ray.hpp
+ /home/fqy22/桌面/smallpt/include/BDBox.hpp
+ /home/fqy22/桌面/smallpt/include/MMPRay.hpp
+ /home/fqy22/桌面/smallpt/include/Ray.hpp
+ /home/fqy22/桌面/smallpt/include/init.hpp
  /home/fqy22/桌面/smallpt/include/geometry/include.hpp
  /home/fqy22/桌面/smallpt/include/geometry/BaseGeo.hpp
  /home/fqy22/桌面/smallpt/include/Ray.hpp
@@ -273,4 +282,5 @@ CMakeFiles/pt.dir/src/main.cpp.o
  /home/fqy22/桌面/smallpt/src/helpers/brdf_helper.hpp
  /home/fqy22/桌面/smallpt/src/helpers/cosw_helper.hpp
  /home/fqy22/桌面/smallpt/src/helpers/ppm_helper.hpp
+ /home/fqy22/桌面/smallpt/src/helpers/bdbox_helper.hpp
 

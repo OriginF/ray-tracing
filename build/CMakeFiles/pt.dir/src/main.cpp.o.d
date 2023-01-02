@@ -189,8 +189,17 @@ CMakeFiles/pt.dir/src/main.cpp.o: /home/fqy22/桌面/smallpt/src/main.cpp \
  /home/fqy22/桌面/smallpt/src/./../include/././def.hpp \
  /home/fqy22/桌面/smallpt/src/./../include/./Ray.hpp \
  /home/fqy22/桌面/smallpt/src/./../include/././Vec.hpp \
- /home/fqy22/桌面/smallpt/src/./../include/./init.hpp \
+ /home/fqy22/桌面/smallpt/src/./../include/./Crash.hpp \
+ /home/fqy22/桌面/smallpt/src/./../include/./BDBox.hpp \
+ /home/fqy22/桌面/smallpt/src/./../include/././Crash.hpp \
+ /home/fqy22/桌面/smallpt/src/./../include/././init.hpp \
+ /home/fqy22/桌面/smallpt/src/./../include/./././def.hpp \
+ /home/fqy22/桌面/smallpt/src/./../include/./././Vec.hpp \
+ /home/fqy22/桌面/smallpt/src/./../include/./././Ray.hpp \
+ /home/fqy22/桌面/smallpt/src/./../include/./././BDBox.hpp \
+ /home/fqy22/桌面/smallpt/src/./../include/./MMPRay.hpp \
  /home/fqy22/桌面/smallpt/src/./../include/././Ray.hpp \
+ /home/fqy22/桌面/smallpt/src/./../include/./init.hpp \
  /home/fqy22/桌面/smallpt/src/./../include/./geometry/include.hpp \
  /home/fqy22/桌面/smallpt/src/./../include/./geometry/./BaseGeo.hpp \
  /home/fqy22/桌面/smallpt/src/./../include/./geometry/./../Ray.hpp \
@@ -223,4 +232,5 @@ CMakeFiles/pt.dir/src/main.cpp.o: /home/fqy22/桌面/smallpt/src/main.cpp \
  /home/fqy22/桌面/smallpt/src/./././helpers/././cosw_helper.hpp \
  /home/fqy22/桌面/smallpt/src/./././helpers/./brdf_helper.hpp \
  /home/fqy22/桌面/smallpt/src/./././helpers/./cosw_helper.hpp \
- /home/fqy22/桌面/smallpt/src/./././helpers/./ppm_helper.hpp
+ /home/fqy22/桌面/smallpt/src/./././helpers/./ppm_helper.hpp \
+ /home/fqy22/桌面/smallpt/src/./././helpers/./bdbox_helper.hpp
