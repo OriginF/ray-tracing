@@ -20,7 +20,7 @@ using namespace std;
 
 unsigned short xseed[3] = {1,2,3}; //erand48 seed
 enum REFLECT{DIFF,SPEC,REFR,UNDEF};
-enum MODE{SIMPLE,BRDF,MIS,PPM};
+enum MODE{SIMPLE,BRDF,MIS,PPM,FISH};
 double epsilon = 1e-4;
 
 inline double clamp(double x) { return x < 0 ? 0 : x > 1 ? 1 : x; }

@@ -7,5 +7,6 @@
 #include "./cosw_helper.hpp"
 #include "./ppm_helper.hpp"
 #include "./bdbox_helper.hpp"
+#include "./camera_helper.hpp"
 
 #endif

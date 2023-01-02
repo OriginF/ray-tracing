@@ -233,4 +233,6 @@ CMakeFiles/pt.dir/src/main.cpp.o: /home/fqy22/桌面/smallpt/src/main.cpp \
  /home/fqy22/桌面/smallpt/src/./././helpers/./brdf_helper.hpp \
  /home/fqy22/桌面/smallpt/src/./././helpers/./cosw_helper.hpp \
  /home/fqy22/桌面/smallpt/src/./././helpers/./ppm_helper.hpp \
- /home/fqy22/桌面/smallpt/src/./././helpers/./bdbox_helper.hpp
+ /home/fqy22/桌面/smallpt/src/./././helpers/./bdbox_helper.hpp \
+ /home/fqy22/桌面/smallpt/src/./././helpers/./camera_helper.hpp \
+ /home/fqy22/桌面/smallpt/src/./././helpers/./../def.hpp

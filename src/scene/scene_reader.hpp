@@ -24,18 +24,27 @@ vector<string> divide(string line){
 void scene_reader(string filename){
     ifstream file(filename);
     string line;
-    // vector<BaseGeo*> scenes;
+    // 渲染选择:
     getline(file,line);
     vector<string> argd = divide(line);
     if(argd[0]=="SIMPLE")mode = SIMPLE;
     else if(argd[0]=="BRDF")mode = BRDF;
     else if(argd[0]=="MIS")mode = MIS;
     else if(argd[0]=="PPM")mode = PPM;
+    else if(argd[0]=="FISH")mode = FISH;
     samples = atoi(argd[1].c_str());
+    if(mode == FISH){
+        fish_f = atof(argd[2].c_str());
+    }
+    //渲染相机参数:
+    getline(file,line);
+    vector<string> argca = divide(line);
+    campos = Campos(Vec3D(atof(argca[0].c_str()),atof(argca[1].c_str()),atof(argca[2].c_str())),
+            Vec3D(atof(argca[3].c_str()),atof(argca[4].c_str()),atof(argca[5].c_str())).normalize());
     while(getline(file,line)){
         if(line[0]=='#')continue;
         vector<string> temps = divide(line);
-        if(temps.size()==0){printf("aha");continue;}
+        if(temps.size()==0){continue;}
         for(int i=0;i<temps.size();i++){
             printf(temps[i].c_str());
             printf(" ");

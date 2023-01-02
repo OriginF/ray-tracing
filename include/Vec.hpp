@@ -65,4 +65,11 @@ public:
 
 };
 
+class Vec2D{
+public:
+    double x;
+    double y;
+    Vec2D(double x_,double y_):x(x_),y(y_){};
+};
+
 #endif

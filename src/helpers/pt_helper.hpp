@@ -21,7 +21,7 @@ inline Vec3D Render(const Ray &r, int depth){
         else  
             return obj->emission; 
     if (obj->reflect == DIFF) {// Ideal DIFFUSE reflection 
-        if(mode == SIMPLE){
+        if(mode == SIMPLE || mode == FISH){
             double r1 = 2 * M_PI*erand48(xseed), r2 = erand48(xseed), r2s = sqrt(r2);
             Vec3D w = nl, u = ((fabs(w.x)>.1 ? Vec3D(0, 1, 0) : Vec3D(1,0,0)).cross(w)).normalize(), v = w.cross(u);  //w，v，u为正交基
             Vec3D d = (u*cos(r1)*r2s + v*sin(r1)*r2s + w*sqrt(1 - r2)).normalize();//随机产生一个半球的方向，r2表示的是theta，r1表示的是fai。

@@ -33,9 +33,20 @@ inline void sample_Render(int x, int y){
                 double dx = r1<1 ? sqrt(r1) - 1 : 1 - sqrt(2 - r1);
                 double dy = r2<1 ? sqrt(r2) - 1 : 1 - sqrt(2 - r2);
                 // subpixels sx
-                Vec3D d = cx*(((sx + .5 + dx) / 2 + x) / w - .5) +
-                    cy*(((sy + .5 + dy) / 2 + y) / h - .5) + campos.d;
-                r = r + Render(Ray(campos.o + d * 140, d.normalize()), 0)*(1. / samples);
+                Vec3D d;
+                if(mode == FISH){
+                    double dx = (((sx + .5 + dx) / 2 + x)/w - .5)*(fish_f);
+                    double dy = (((sy + .5 + dy) / 2 + y)/h - .5)*(fish_f);
+                    d = get_fish_ray(Vec2D(dx,dy));
+                    double nu = abs(fish_f/d.z);
+                    Vec3D into = campos.o+d*nu;
+                    r = r + Render(Ray(campos.o + d * nu, d.normalize()), 0)*(1. / samples);
+                }
+                else{
+                    d = cx*(((sx + .5 + dx) / 2 + x) / w - .5) +
+                        cy*(((sy + .5 + dy) / 2 + y) / h - .5) + campos.d; //焦距140
+                    r = r + Render(Ray(campos.o + d * 140, d.normalize()), 0)*(1. / samples);
+                }
             }
             c[i] = c[i] + Vec3D(clamp(r.x), clamp(r.y), clamp(r.z))*.25;
         }
