@@ -22,6 +22,12 @@ public:
         vertices[2] = v3;
     }
 
+    void set(Vec3D v1,Vec3D v2,Vec3D v3){
+        vertices[0] = v1;
+        vertices[1] = v2;
+        vertices[2] = v3;
+    }
+
     Vec3D toleft_test(Vec3D v1, Vec3D v2, Vec3D point) const {
         return (v1-v2).cross(v1-point);
     }
@@ -53,7 +59,7 @@ public:
         }
     }
 
-    Vec3D get_nnorm(const Vec3D intersector, const Vec3D ro) const{
+    Vec3D get_nnorm(const Vec3D intersector, const Ray &r) const{
         Vec3D norm = (vertices[1]-vertices[0]).cross(vertices[2]-vertices[0]);
         return norm.normalize();
     }

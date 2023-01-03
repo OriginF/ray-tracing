@@ -14,7 +14,7 @@ void Trace(const Ray &r, int dpt, bool m, const Vec3D &fl, const Vec3D &adj, int
 
     const BaseGeo* obj = geos[id];
     Vec3D x = r.o + r.d * t;
-    Vec3D n = obj->get_nnorm(x,r.o);
+    Vec3D n = obj->get_nnorm(x,r);
     Vec3D f = obj->color;
     Vec3D nl = n.dot(r.d) < 0 ? n : n * -1;
     double p = f.x > f.y && f.x > f.z ? f.x : f.y > f.z ? f.y : f.z;

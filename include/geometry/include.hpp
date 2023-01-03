@@ -4,5 +4,7 @@
 #include "./BaseGeo.hpp"
 #include "./Mesh.hpp"
 #include "./Sphere.hpp"
+#include "./Tetrahd.hpp"
+#include "./Circ.hpp"
 
 #endif

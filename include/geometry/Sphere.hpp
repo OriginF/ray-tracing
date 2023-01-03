@@ -27,7 +27,7 @@ public:
         return (t = b - det) > epsilon ? t : ((t = b + det) > epsilon ? t : 0);
     }
 
-    Vec3D get_nnorm(const Vec3D intersector, const Vec3D ro) const{
+    Vec3D get_nnorm(const Vec3D intersector, const Ray &r) const{
         return (intersector-center).normalize();
     }
 

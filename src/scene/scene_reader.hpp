@@ -73,6 +73,31 @@ void scene_reader(string filename){
             Sphere* sphere = new Sphere(radius,center,emission,color,reflect,alpha);
             geos.push_back((BaseGeo*)sphere);
         }
+        else if(temps[0]=="Tetrahd"){
+            Vec3D v1(atof(temps[1].c_str()),atof(temps[2].c_str()),atof(temps[3].c_str()));
+            Vec3D v2(atof(temps[4].c_str()),atof(temps[5].c_str()),atof(temps[6].c_str()));
+            Vec3D v3(atof(temps[7].c_str()),atof(temps[8].c_str()),atof(temps[9].c_str()));
+            Vec3D v4(atof(temps[10].c_str()),atof(temps[11].c_str()),atof(temps[12].c_str()));
+            Vec3D emission(atof(temps[13].c_str()),atof(temps[14].c_str()),atof(temps[15].c_str()));
+            Vec3D color(atof(temps[16].c_str()),atof(temps[17].c_str()),atof(temps[18].c_str()));
+            REFLECT reflect = temps[19]=="DIFF"?DIFF:temps[19]=="SPEC"?SPEC:REFR;
+            double alpha = 0;
+            if(temps.size()==21)alpha = atof(temps[20].c_str());
+            Tetrahd* tetrahd = new Tetrahd(v1,v2,v3,v4,emission,color,reflect,alpha);
+            geos.push_back((BaseGeo*)tetrahd);
+        }
+        else if(temps[0]=="Circ"){
+            double radius = atof(temps[1].c_str());
+            Vec3D cir_start(atof(temps[2].c_str()),atof(temps[3].c_str()),atof(temps[4].c_str()));
+            Vec3D cir_end(atof(temps[5].c_str()),atof(temps[6].c_str()),atof(temps[7].c_str()));
+            Vec3D emission(atof(temps[8].c_str()),atof(temps[9].c_str()),atof(temps[10].c_str()));
+            Vec3D color(atof(temps[11].c_str()),atof(temps[12].c_str()),atof(temps[13].c_str()));
+            REFLECT reflect = temps[14]=="DIFF"?DIFF:temps[14]=="SPEC"?SPEC:REFR;
+            double alpha = 0;
+            if(temps.size()==16)alpha = atof(temps[15].c_str());
+            Circ* circ = new Circ(radius,cir_start,cir_end,emission,color,reflect,alpha);
+            geos.push_back((BaseGeo*)circ);
+        }
         else{
             printf("wrong scene file");
             exit(-1);

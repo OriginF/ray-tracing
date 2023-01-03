@@ -4,17 +4,15 @@
 #include "../include/include.hpp"
 
 int w=1024, h=768, samples = 11;
-// int w = 2000, h=300, samples = 11;
-// int w=300,h=300,samples=1000;
 //camera EXtrinsics
 Campos campos(Vec3D(50,52,295.6), Vec3D(0,-0.042612,-1).normalize());
-// Campos campos(Vec3D(50,52,260), Vec3D(0,-0.042612,-1).normalize());
 //camera Coordinate
 Vec3D cx = Vec3D(w*.5135 / h,0,0), cy = (cx.cross(campos.d)).normalize()*.5135;
 Vec3D r;//color of samples
 Vec3D *c = new Vec3D[w*h];//Image
 MODE mode;
 
+//ppm var
 unsigned int pixel_index = 0;
 unsigned int num_hash = 0;
 unsigned int num_photon = 0;
@@ -30,6 +28,10 @@ int primes[61] = {
         191, 193, 197, 199, 211, 223, 227, 229, 233, 239, 241, 251, 257, 263, 269, 271, 277, 281, 283
 };
 
+//fisheye camera var
 double fish_f = 92;
+
+//bdpt var
+vector<BaseGeo*> lights;
 
 #endif

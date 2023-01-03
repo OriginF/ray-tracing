@@ -208,6 +208,9 @@ CMakeFiles/pt.dir/src/main.cpp.o: /home/fqy22/桌面/smallpt/src/main.cpp \
  /home/fqy22/桌面/smallpt/src/./../include/./geometry/./../Vec.hpp \
  /home/fqy22/桌面/smallpt/src/./../include/./geometry/./Sphere.hpp \
  /home/fqy22/桌面/smallpt/src/./../include/./geometry/./../def.hpp \
+ /home/fqy22/桌面/smallpt/src/./../include/./geometry/./Tetrahd.hpp \
+ /home/fqy22/桌面/smallpt/src/./../include/./geometry/././Mesh.hpp \
+ /home/fqy22/桌面/smallpt/src/./../include/./geometry/./Circ.hpp \
  /home/fqy22/桌面/smallpt/src/././scene/scene.hpp \
  /home/fqy22/桌面/smallpt/src/././scene/../../include/include.hpp \
  /home/fqy22/桌面/smallpt/src/././scene/./all_objs.hpp \

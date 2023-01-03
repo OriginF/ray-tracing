@@ -11,7 +11,7 @@ inline Vec3D Render(const Ray &r, int depth){
     if(!intersect(r,t,id))return Vec3D();
     const BaseGeo* obj = geos[id];
     Vec3D x = r.o + r.d*t;
-    Vec3D n = obj->get_nnorm(x, r.o);
+    Vec3D n = obj->get_nnorm(x, r);
     Vec3D nl = n.dot(r.d) < 0 ? n : n*-1;
     Vec3D f = obj->color;
     double p = f.x>f.y && f.x>f.z ? f.x : f.y>f.z ? f.y : f.z; // max refl 
